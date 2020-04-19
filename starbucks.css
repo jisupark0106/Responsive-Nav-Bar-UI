@@ -1,0 +1,124 @@
+:root {
+  --font-color: #424242;
+  --background-color: #efebe9;
+  --accent-color: #81a363;
+  --dark-background-color: #424242;
+  --logo-color: #00701a;
+}
+body {
+  margin: 0;
+  background-color: var(--dark-background-color);
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+li {
+  list-style: none;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--background-color);
+  padding: 10px 20px;
+  align-content: center;
+}
+
+.nav_logo i {
+  font-size: 50px;
+  padding-top: 20px;
+  color: var(--accent-color);
+}
+.nav_navbar_map {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 15px;
+}
+
+.nav_navbar_map li {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid #c0c0c0;
+}
+.nav_navbar_map a {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.nav_navbar_menu {
+  display: flex;
+  font-size: 13px;
+  flex-direction: row;
+  padding-bottom: 26px;
+  margin-bottom: 0px;
+}
+
+.nav_navbar_menu a {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.nav_navbar_menu a:hover {
+  background-color: var(--dark-background-color);
+  color: var(--accent-color);
+}
+.nav_small_menu {
+  display: none;
+}
+
+@media screen and (max-width: 840px) {
+  .nav {
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  .small_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav_logo i {
+    font-size: 30px;
+  }
+  .nav_navbar_map {
+    display: none;
+  }
+  .nav_navbar_menu {
+    display: none;
+    font-size: 14px;
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  .nav_navbar_menu li {
+    text-align: center;
+    width: 100%;
+  }
+  .nav_navbar_menu a {
+    display: block;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav_navbar_menu a:hover {
+    background-color: var(--dark-background-color);
+    color: var(--accent-color);
+  }
+  .nav_small_menu {
+    display: flex;
+    direction: row;
+  }
+  .nav_small_menu a {
+    padding-left: 25px;
+    font-size: 25px;
+    color: var(--dark-background-color);
+  }
+  .nav_navbar_menu.active {
+    display: flex;
+  }
+}
